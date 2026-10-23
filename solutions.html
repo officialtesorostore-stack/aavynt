@@ -1,0 +1,221 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Solutions · Aavynt</title><meta name="claude:viewport-fit-sides" content="cover"><meta name="description" content="Aavynt drone platforms, subsystems and services: multirotor ISR, VTOL fixed-wing, FPV, datalinks, ground control and training."><link rel="canonical" href="https://aavynt.com/solutions.html"><meta property="og:title" content="Solutions · Aavynt"><meta property="og:description" content="Aavynt drone platforms, subsystems and services: multirotor ISR, VTOL fixed-wing, FPV, datalinks, ground control and training."><meta property="og:type" content="website"><meta property="og:image" content="https://aavynt.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080F"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M16 4 L28 26 L16 20 L4 26 Z%22 fill=%22%23F2A65A%22/%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&display=swap"><style>
+/* Layout: cinematic full-bleed bands; a dusk sky opens each page, then wide open dark space, big expanded type, no boxes */
+:root{
+--night:#06080F;--deep:#0B0F1C;--raise:#141A2E;--text:#ECEEF2;--dim:#9198AC;--faint:#4B5268;
+--amber:#F2A65A;--amber-hi:#FFC489;--on-amber:#1A0F05;--port:#FF5A4E;--starboard:#3DDC84;
+--display:"Archivo","Arial Narrow",system-ui,sans-serif;
+--body:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+--mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+--w:1240px;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--text);font:400 17px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--night)}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:4px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-stretch:125%;font-weight:600;line-height:1;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,7vw,6.2rem)}
+h2{font-size:clamp(2rem,4.4vw,3.8rem)}
+h3{font-size:clamp(1.25rem,1.8vw,1.6rem);font-weight:500;letter-spacing:-.01em;text-wrap:pretty}
+p{margin:0;max-width:60ch}
+.wrap{max-width:var(--w);margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.kicker{font:500 .74rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.lede{font-size:clamp(1.05rem,1.4vw,1.25rem);color:var(--dim)}
+.dim{color:var(--dim)}
+
+/* header floats over the sky */
+.site-head{position:absolute;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font:600 1.1rem/1 var(--display);font-stretch:125%;letter-spacing:.32em}
+.brand svg{width:22px;height:22px;color:var(--amber)}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:.95rem;padding:8px 14px;color:var(--dim);border-radius:99px}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--text)}
+.nav a[aria-current="page"]:not(.btn){background:rgba(236,238,242,.08)}
+@media (max-width:720px){
+ .site-head .wrap{padding-block:14px;min-height:0}
+ .nav{width:100%;justify-content:space-between;gap:0}
+ .nav a{padding:6px 8px;font-size:.88rem}
+}
+
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:600 .98rem/1 var(--body);padding:15px 24px;border-radius:99px;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-amber,.nav a.btn{background:var(--amber);color:var(--on-amber)}
+.nav a.btn{padding:10px 18px}
+.btn-amber:hover,.nav a.btn:hover{background:var(--amber-hi);color:var(--on-amber)}
+.btn-line{border-color:rgba(236,238,242,.28);color:var(--text)}
+.btn-line:hover{border-color:var(--text)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ---------- sky ---------- */
+.sky{position:relative;overflow:hidden;isolation:isolate;
+ background:
+  radial-gradient(90% 55% at 72% 100%,rgba(242,166,90,.42),transparent 62%),
+  radial-gradient(60% 40% at 15% 100%,rgba(120,90,160,.28),transparent 70%),
+  linear-gradient(180deg,#04060C 0%,#080D1E 38%,#141A36 68%,#2A2440 88%,#3B2C3C 100%)}
+.stars{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.stars i{position:absolute;left:0;top:0;width:1px;height:1px;border-radius:50%}
+.stars i:nth-child(2){width:2px;height:2px}
+.ridges{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:auto;z-index:-1;display:block}
+.hero{min-height:min(900px,96vh);display:flex;align-items:flex-end}
+.hero .wrap{width:100%;padding-block:160px 72px;display:grid;gap:26px}
+.hero h1{max-width:11ch}
+.hero .lede{color:#C4C8D4;max-width:52ch}
+.flyer{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.drone{position:absolute;right:max(2vw,8px);top:clamp(90px,13vh,160px);width:clamp(320px,48vw,760px);aspect-ratio:3/2;height:auto;z-index:-1;pointer-events:none}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;font:500 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding-top:10px}
+.hero-meta b{color:var(--text);font-weight:500}
+@media (max-width:720px){.drone{top:104px;right:auto;left:50%;transform:translateX(-50%);width:min(420px,108vw)}.hero:not(:has(canvas)){min-height:0}.hero .wrap{padding-block:150px 48px}.hero:has(.flyer) .wrap{padding-block:240px 48px}.hero:has(.drone) .wrap{padding-block:330px 48px}}
+
+.sky-short .wrap{padding-block:170px 80px;display:grid;gap:22px}
+.sky-short h1{font-size:clamp(2.4rem,6vw,5rem);max-width:14ch}
+@media (max-width:720px){.sky-short .wrap{padding-block:140px 56px}}
+
+/* ---------- sections ---------- */
+section.s{padding-block:clamp(80px,12vw,160px)}
+.statement{font:500 clamp(1.6rem,3.4vw,2.9rem)/1.18 var(--display);font-stretch:112%;letter-spacing:-.015em;max-width:24ch;text-wrap:balance}
+.statement span{color:var(--faint)}
+
+/* proof */
+.proof{padding-block:40px;background:var(--deep)}
+.proof ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:24px 64px}
+.proof li{display:grid;gap:4px}
+.proof strong{font:600 2rem/1 var(--display);font-stretch:125%}
+.proof span{color:var(--dim);font-size:.92rem}
+
+/* capability list: big type rows, no boxes */
+.caps{list-style:none;margin:56px 0 0;padding:0;display:grid}
+.caps li{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px 48px;padding-block:34px;align-items:baseline;position:relative}
+.caps li+li::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 80%)}
+.caps h3{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:500;transition:color .25s}
+.caps li:hover h3{color:var(--amber)}
+.caps p{color:var(--dim)}
+@media (max-width:760px){.caps li{grid-template-columns:1fr;padding-block:26px}}
+
+/* full-bleed field scene */
+.field{position:relative;min-height:min(780px,90vh);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate;background:#05070C}
+.field>img,.field>.scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.field::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,8,15,.1) 30%,rgba(6,8,15,.92))}
+.field .wrap{width:100%;padding-block:72px;display:grid;gap:18px}
+.field h2{max-width:12ch}
+
+/* sectors: four tall panels lit like different hours */
+.sectors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:56px}
+.sector{min-height:380px;border-radius:22px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;position:relative;overflow:hidden;isolation:isolate}
+.sector::before{content:"";position:absolute;inset:0;z-index:-1}
+.sector:nth-child(1)::before{background:radial-gradient(120% 70% at 50% 110%,rgba(242,166,90,.35),transparent 60%),linear-gradient(180deg,#0C1124,#1A1730)}
+.sector:nth-child(2)::before{background:radial-gradient(120% 70% at 20% 110%,rgba(110,150,220,.32),transparent 60%),linear-gradient(180deg,#0A1220,#13233A)}
+.sector:nth-child(3)::before{background:radial-gradient(120% 70% at 80% 110%,rgba(180,140,90,.30),transparent 60%),linear-gradient(180deg,#100F18,#221C22)}
+.sector:nth-child(4)::before{background:radial-gradient(120% 70% at 50% 110%,rgba(255,90,78,.26),transparent 60%),linear-gradient(180deg,#120C14,#24141C)}
+.sector .k{position:absolute;top:26px;left:28px;font:500 .72rem/1 var(--mono);letter-spacing:.16em;color:var(--dim);text-transform:uppercase}
+.sector p{color:#B9BECC;font-size:.96rem}
+@media (max-width:1000px){.sectors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.sectors{grid-template-columns:1fr}.sector{min-height:280px}}
+
+/* process: a flight plan with waypoints */
+.plan{margin-top:64px;position:relative}
+.plan svg{display:block;width:100%;height:auto}
+.plan ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.plan li{display:grid;gap:10px;align-content:start}
+.plan .wp{font:500 .76rem/1 var(--mono);letter-spacing:.16em;color:var(--amber)}
+.plan li p{color:var(--dim);font-size:.98rem}
+@media (max-width:860px){
+ .plan svg{display:none}
+ .plan ol{grid-template-columns:1fr;gap:34px;border-left:1px dashed rgba(242,166,90,.5);padding-left:26px}
+ .plan li{position:relative}
+ .plan li::before{content:"";position:absolute;left:-32px;top:-1px;width:11px;height:11px;border-radius:50%;border:2px solid var(--amber);background:var(--night)}
+}
+
+/* closing call */
+.closing{position:relative;overflow:hidden;isolation:isolate;text-align:left;
+ background:radial-gradient(70% 90% at 80% 120%,rgba(242,166,90,.38),transparent 65%),linear-gradient(180deg,var(--night),#141A30)}
+.closing .wrap{padding-block:clamp(90px,13vw,170px);display:grid;gap:26px}
+.closing h2{font-size:clamp(2.4rem,6vw,5.4rem);max-width:13ch}
+
+/* solutions groups */
+.group{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:40px 72px;padding-block:clamp(64px,8vw,110px)}
+.group+.group{padding-top:0}
+.group-head{display:grid;gap:14px;align-content:start;position:sticky;top:40px;align-self:start}
+.rows{display:grid}
+.rows article{display:grid;gap:10px;padding-block:28px}
+.rows article+article{background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 85%) top/100% 1px no-repeat}
+.rows p{color:var(--dim)}
+.rows ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.rows li{font:500 .76rem/1 var(--mono);letter-spacing:.06em;color:var(--text);padding:8px 12px;border-radius:99px;background:var(--raise)}
+@media (max-width:860px){.group{grid-template-columns:1fr}.group-head{position:static}}
+
+/* about principles */
+.principles{display:grid;margin-top:48px}
+.principles div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px 48px;padding-block:30px}
+.principles div+div{background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 85%) top/100% 1px no-repeat}
+.principles strong{font:500 clamp(1.4rem,2.4vw,2rem)/1.1 var(--display);font-stretch:115%}
+.principles p{color:var(--dim)}
+@media (max-width:760px){.principles div{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr);gap:clamp(40px,7vw,110px);align-items:start}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+form{display:grid;gap:30px;min-width:0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media (max-width:600px){.row{grid-template-columns:1fr}}
+label{display:grid;gap:8px;align-content:start}
+label>span{font:500 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+label em{font-style:normal;color:var(--faint);margin-left:8px;letter-spacing:.08em}
+input,select,textarea{font:inherit;font-size:1.1rem;color:var(--text);background:transparent;border:0;border-bottom:1px solid rgba(236,238,242,.25);border-radius:0;padding:10px 0;width:100%;transition:border-color .2s}
+select{background:var(--night)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--amber);box-shadow:0 1px 0 var(--amber)}
+textarea{min-height:130px;resize:vertical}
+::placeholder{color:var(--faint)}
+.form-status{padding:16px 18px;border-radius:14px;background:var(--raise);color:var(--text)}
+.details{display:grid;gap:30px;padding:34px;border-radius:22px;background:var(--deep)}
+.details div{display:grid;gap:6px;min-width:0}
+.details span{font:500 .72rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.details a,.details p{font-size:1.12rem;overflow-wrap:anywhere;text-decoration:none}
+.hp{position:absolute;left:-9999px}
+
+/* footer */
+.site-foot{background:var(--night);padding-block:56px 36px;color:var(--dim);font-size:.92rem}
+.site-foot .wrap{display:grid;gap:40px}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap}
+.foot-word{font:600 clamp(3rem,13vw,11rem)/.8 var(--display);font-stretch:125%;letter-spacing:.02em;color:var(--raise);user-select:none}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+.foot-links a{text-decoration:none}
+.foot-links a:hover{color:var(--text)}
+.foot-bottom{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;font-size:.85rem;color:var(--faint)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Aavynt","legalName":"Aavynt Frontier Systems Private Limited","url":"https://aavynt.com","email":"support@aavynt.com","telephone":"+919205505963","address":{"@type":"PostalAddress","streetAddress":"H. No. 130, Chharayal Nayak","addressLocality":"Haldwani","addressRegion":"Uttarakhand","postalCode":"263139","addressCountry":"IN"}}</script></head><body><header class="site-head"><div class="wrap"><a class="brand" href="./" aria-label="Aavynt home"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M16 4 L28 26 L16 20 L4 26 Z" stroke-linejoin="round"/></svg>AAVYNT</a><nav class="nav" aria-label="Main"><a href="./">Home</a><a href="solutions.html" aria-current="page">Solutions</a><a href="about.html">About</a><a class="btn" href="contact.html">Contact</a></nav></div></header>
+<main>
+<section class="sky sky-short"><div class="stars" aria-hidden="true"><i style="box-shadow:926px 573px rgba(236,238,242,.7),1599px 476px rgba(236,238,242,.7),925px 520px rgba(236,238,242,.7),1202px 194px rgba(236,238,242,.7),378px 524px rgba(236,238,242,.7),974px 644px rgba(236,238,242,.7),1257px 190px rgba(236,238,242,.7),192px 457px rgba(236,238,242,.7),621px 145px rgba(236,238,242,.7),185px 551px rgba(236,238,242,.7),1420px 649px rgba(236,238,242,.7),85px 609px rgba(236,238,242,.7),811px 463px rgba(236,238,242,.7),1339px 630px rgba(236,238,242,.7),1331px 161px rgba(236,238,242,.7),1276px 15px rgba(236,238,242,.7),1082px 64px rgba(236,238,242,.7),121px 36px rgba(236,238,242,.7),389px 247px rgba(236,238,242,.7),1228px 30px rgba(236,238,242,.7),1593px 475px rgba(236,238,242,.7),668px 451px rgba(236,238,242,.7),1210px 200px rgba(236,238,242,.7),1063px 239px rgba(236,238,242,.7),1311px 301px rgba(236,238,242,.7),1023px 4px rgba(236,238,242,.7),1356px 87px rgba(236,238,242,.7),936px 670px rgba(236,238,242,.7),569px 416px rgba(236,238,242,.7),1128px 85px rgba(236,238,242,.7),1449px 260px rgba(236,238,242,.7),645px 235px rgba(236,238,242,.7),1050px 295px rgba(236,238,242,.7),60px 71px rgba(236,238,242,.7),1153px 110px rgba(236,238,242,.7),820px 110px rgba(236,238,242,.7),595px 395px rgba(236,238,242,.7),136px 17px rgba(236,238,242,.7),1402px 0px rgba(236,238,242,.7),437px 214px rgba(236,238,242,.7),107px 481px rgba(236,238,242,.7),768px 406px rgba(236,238,242,.7),859px 74px rgba(236,238,242,.7),1159px 644px rgba(236,238,242,.7),406px 691px rgba(236,238,242,.7),552px 344px rgba(236,238,242,.7),178px 318px rgba(236,238,242,.7),681px 15px rgba(236,238,242,.7),839px 120px rgba(236,238,242,.7),275px 252px rgba(236,238,242,.7),1447px 103px rgba(236,238,242,.7),22px 61px rgba(236,238,242,.7),952px 498px rgba(236,238,242,.7),363px 698px rgba(236,238,242,.7),1145px 192px rgba(236,238,242,.7),916px 521px rgba(236,238,242,.7),390px 134px rgba(236,238,242,.7),858px 659px rgba(236,238,242,.7),785px 119px rgba(236,238,242,.7),808px 430px rgba(236,238,242,.7),435px 0px rgba(236,238,242,.7),552px 606px rgba(236,238,242,.7),622px 20px rgba(236,238,242,.7),431px 191px rgba(236,238,242,.7),807px 616px rgba(236,238,242,.7),1314px 590px rgba(236,238,242,.7),205px 43px rgba(236,238,242,.7),299px 218px rgba(236,238,242,.7),904px 264px rgba(236,238,242,.7),19px 624px rgba(236,238,242,.7),673px 303px rgba(236,238,242,.7),790px 75px rgba(236,238,242,.7),152px 92px rgba(236,238,242,.7),427px 596px rgba(236,238,242,.7),1303px 248px rgba(236,238,242,.7),31px 615px rgba(236,238,242,.7),755px 380px rgba(236,238,242,.7),1274px 464px rgba(236,238,242,.7),260px 601px rgba(236,238,242,.7),990px 588px rgba(236,238,242,.7),277px 395px rgba(236,238,242,.7),374px 642px rgba(236,238,242,.7),315px 318px rgba(236,238,242,.7),467px 625px rgba(236,238,242,.7),510px 194px rgba(236,238,242,.7),324px 644px rgba(236,238,242,.7),1134px 201px rgba(236,238,242,.7),1406px 397px rgba(236,238,242,.7),988px 618px rgba(236,238,242,.7),160px 431px rgba(236,238,242,.7)"></i><i style="box-shadow:971px 275px rgba(255,236,210,.85),1346px 541px rgba(255,236,210,.85),1364px 358px rgba(255,236,210,.85),292px 390px rgba(255,236,210,.85),22px 383px rgba(255,236,210,.85),988px 280px rgba(255,236,210,.85),1317px 471px rgba(255,236,210,.85),1414px 615px rgba(255,236,210,.85),466px 571px rgba(255,236,210,.85),3px 677px rgba(255,236,210,.85),1278px 148px rgba(255,236,210,.85),901px 376px rgba(255,236,210,.85),332px 347px rgba(255,236,210,.85),430px 60px rgba(255,236,210,.85),1180px 204px rgba(255,236,210,.85),152px 525px rgba(255,236,210,.85)"></i></div><div class="wrap"><span class="kicker">Solutions</span><h1>Aircraft, links and the ground behind them.</h1><p class="lede">Buy a complete system, integrate one of our subsystems into your own aircraft, or bring us in to engineer something new.</p></div><svg class="ridges" viewBox="0 0 1600 260" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 150 L120 118 L230 140 L360 96 L470 128 L600 88 L720 120 L860 80 L990 116 L1120 90 L1260 124 L1400 98 L1600 130 V260 H0Z" fill="#1A1729" opacity=".8"/>
+<path d="M0 190 L140 160 L260 182 L400 146 L540 176 L700 140 L840 172 L980 150 L1140 180 L1290 152 L1440 176 L1600 160 V260 H0Z" fill="#0F0F1C"/>
+<path d="M0 230 L180 206 L340 222 L520 198 L700 220 L900 202 L1100 224 L1300 204 L1460 220 L1600 210 V260 H0Z" fill="#06080F"/>
+</svg></section>
+<div class="wrap">
+ <section class="group">
+  <div class="group-head"><span class="kicker">Platforms</span><h2>Aircraft</h2></div>
+  <div class="rows">
+   <article><h3>Multirotor ISR</h3><p>Quick-deploy quadcopters and hexacopters for surveillance and inspection.</p><ul><li>EO/IR gimbal</li><li>Hover and stare</li><li>Backpack transport</li></ul></article>
+   <article><h3>VTOL fixed-wing</h3><p>Vertical take-off with fixed-wing endurance for long corridors and wide areas.</p><ul><li>No runway</li><li>Mapping and patrol</li><li>BVLOS ready</li></ul></article>
+   <article><h3>Tactical FPV</h3><p>Agile first-person-view aircraft for close-range tasks and operator training.</p><ul><li>Low-latency video</li><li>Field-repairable</li><li>Simulator training</li></ul></article>
+  </div>
+ </section>
+ <section class="group">
+  <div class="group-head"><span class="kicker">Systems</span><h2>Subsystems</h2></div>
+  <div class="rows">
+   <article><h3>Datalinks</h3><p>Control, telemetry and video links tuned for range and resistance to interference.</p></article>
+   <article><h3>Ground control</h3><p>Ruggedised ground stations and mission planning software.</p></article>
+   <article><h3>Payload integration</h3><p>Camera, sensor and release-mechanism integration with the mechanical, power and data interfaces done properly.</p></article>
+  </div>
+ </section>
+ <section class="group">
+  <div class="group-head"><span class="kicker">Services</span><h2>Support</h2></div>
+  <div class="rows">
+   <article><h3>Operator training</h3><p>Classroom, simulator and live-flight training for new and experienced pilots.</p></article>
+   <article><h3>Maintenance</h3><p>Scheduled servicing, spares and repair for your fleet.</p></article>
+   <article><h3>Custom engineering</h3><p>Design work for programmes that need something not on this page.</p></article>
+  </div>
+ </section>
+</div>
+<section class="closing"><div class="wrap"><span class="kicker">Start a programme</span><h2>Need something specific?</h2><p class="lede">Tell us the payload and the operating area. We will tell you what it takes.</p><div class="actions"><a class="btn btn-amber" href="contact.html">Talk to our engineers <span aria-hidden="true">→</span></a></div></div></section>
+</main><footer class="site-foot"><div class="wrap"><div class="foot-top"><div class="foot-links"><a href="solutions.html">Solutions</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="mailto:support@aavynt.com">support@aavynt.com</a></div><span>Unmanned systems, engineered in India.</span></div><div class="foot-word" aria-hidden="true">AAVYNT</div><div class="foot-bottom"><span>© 2026 Aavynt Frontier Systems Private Limited</span><span>Haldwani, Uttarakhand, India</span></div></div></footer></body></html>

@@ -1,0 +1,207 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>About · Aavynt</title><meta name="claude:viewport-fit-sides" content="cover"><meta name="description" content="Aavynt is an Indian drone technology company that designs, integrates and supports unmanned systems."><link rel="canonical" href="https://aavynt.com/about.html"><meta property="og:title" content="About · Aavynt"><meta property="og:description" content="Aavynt is an Indian drone technology company that designs, integrates and supports unmanned systems."><meta property="og:type" content="website"><meta property="og:image" content="https://aavynt.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080F"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M16 4 L28 26 L16 20 L4 26 Z%22 fill=%22%23F2A65A%22/%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&display=swap"><style>
+/* Layout: cinematic full-bleed bands; a dusk sky opens each page, then wide open dark space, big expanded type, no boxes */
+:root{
+--night:#06080F;--deep:#0B0F1C;--raise:#141A2E;--text:#ECEEF2;--dim:#9198AC;--faint:#4B5268;
+--amber:#F2A65A;--amber-hi:#FFC489;--on-amber:#1A0F05;--port:#FF5A4E;--starboard:#3DDC84;
+--display:"Archivo","Arial Narrow",system-ui,sans-serif;
+--body:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+--mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+--w:1240px;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--text);font:400 17px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--night)}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:4px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-stretch:125%;font-weight:600;line-height:1;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,7vw,6.2rem)}
+h2{font-size:clamp(2rem,4.4vw,3.8rem)}
+h3{font-size:clamp(1.25rem,1.8vw,1.6rem);font-weight:500;letter-spacing:-.01em;text-wrap:pretty}
+p{margin:0;max-width:60ch}
+.wrap{max-width:var(--w);margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.kicker{font:500 .74rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.lede{font-size:clamp(1.05rem,1.4vw,1.25rem);color:var(--dim)}
+.dim{color:var(--dim)}
+
+/* header floats over the sky */
+.site-head{position:absolute;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font:600 1.1rem/1 var(--display);font-stretch:125%;letter-spacing:.32em}
+.brand svg{width:22px;height:22px;color:var(--amber)}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:.95rem;padding:8px 14px;color:var(--dim);border-radius:99px}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--text)}
+.nav a[aria-current="page"]:not(.btn){background:rgba(236,238,242,.08)}
+@media (max-width:720px){
+ .site-head .wrap{padding-block:14px;min-height:0}
+ .nav{width:100%;justify-content:space-between;gap:0}
+ .nav a{padding:6px 8px;font-size:.88rem}
+}
+
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:600 .98rem/1 var(--body);padding:15px 24px;border-radius:99px;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-amber,.nav a.btn{background:var(--amber);color:var(--on-amber)}
+.nav a.btn{padding:10px 18px}
+.btn-amber:hover,.nav a.btn:hover{background:var(--amber-hi);color:var(--on-amber)}
+.btn-line{border-color:rgba(236,238,242,.28);color:var(--text)}
+.btn-line:hover{border-color:var(--text)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ---------- sky ---------- */
+.sky{position:relative;overflow:hidden;isolation:isolate;
+ background:
+  radial-gradient(90% 55% at 72% 100%,rgba(242,166,90,.42),transparent 62%),
+  radial-gradient(60% 40% at 15% 100%,rgba(120,90,160,.28),transparent 70%),
+  linear-gradient(180deg,#04060C 0%,#080D1E 38%,#141A36 68%,#2A2440 88%,#3B2C3C 100%)}
+.stars{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.stars i{position:absolute;left:0;top:0;width:1px;height:1px;border-radius:50%}
+.stars i:nth-child(2){width:2px;height:2px}
+.ridges{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:auto;z-index:-1;display:block}
+.hero{min-height:min(900px,96vh);display:flex;align-items:flex-end}
+.hero .wrap{width:100%;padding-block:160px 72px;display:grid;gap:26px}
+.hero h1{max-width:11ch}
+.hero .lede{color:#C4C8D4;max-width:52ch}
+.flyer{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.drone{position:absolute;right:max(2vw,8px);top:clamp(90px,13vh,160px);width:clamp(320px,48vw,760px);aspect-ratio:3/2;height:auto;z-index:-1;pointer-events:none}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;font:500 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding-top:10px}
+.hero-meta b{color:var(--text);font-weight:500}
+@media (max-width:720px){.drone{top:104px;right:auto;left:50%;transform:translateX(-50%);width:min(420px,108vw)}.hero:not(:has(canvas)){min-height:0}.hero .wrap{padding-block:150px 48px}.hero:has(.flyer) .wrap{padding-block:240px 48px}.hero:has(.drone) .wrap{padding-block:330px 48px}}
+
+.sky-short .wrap{padding-block:170px 80px;display:grid;gap:22px}
+.sky-short h1{font-size:clamp(2.4rem,6vw,5rem);max-width:14ch}
+@media (max-width:720px){.sky-short .wrap{padding-block:140px 56px}}
+
+/* ---------- sections ---------- */
+section.s{padding-block:clamp(80px,12vw,160px)}
+.statement{font:500 clamp(1.6rem,3.4vw,2.9rem)/1.18 var(--display);font-stretch:112%;letter-spacing:-.015em;max-width:24ch;text-wrap:balance}
+.statement span{color:var(--faint)}
+
+/* proof */
+.proof{padding-block:40px;background:var(--deep)}
+.proof ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:24px 64px}
+.proof li{display:grid;gap:4px}
+.proof strong{font:600 2rem/1 var(--display);font-stretch:125%}
+.proof span{color:var(--dim);font-size:.92rem}
+
+/* capability list: big type rows, no boxes */
+.caps{list-style:none;margin:56px 0 0;padding:0;display:grid}
+.caps li{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px 48px;padding-block:34px;align-items:baseline;position:relative}
+.caps li+li::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 80%)}
+.caps h3{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:500;transition:color .25s}
+.caps li:hover h3{color:var(--amber)}
+.caps p{color:var(--dim)}
+@media (max-width:760px){.caps li{grid-template-columns:1fr;padding-block:26px}}
+
+/* full-bleed field scene */
+.field{position:relative;min-height:min(780px,90vh);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate;background:#05070C}
+.field>img,.field>.scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.field::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,8,15,.1) 30%,rgba(6,8,15,.92))}
+.field .wrap{width:100%;padding-block:72px;display:grid;gap:18px}
+.field h2{max-width:12ch}
+
+/* sectors: four tall panels lit like different hours */
+.sectors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:56px}
+.sector{min-height:380px;border-radius:22px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;position:relative;overflow:hidden;isolation:isolate}
+.sector::before{content:"";position:absolute;inset:0;z-index:-1}
+.sector:nth-child(1)::before{background:radial-gradient(120% 70% at 50% 110%,rgba(242,166,90,.35),transparent 60%),linear-gradient(180deg,#0C1124,#1A1730)}
+.sector:nth-child(2)::before{background:radial-gradient(120% 70% at 20% 110%,rgba(110,150,220,.32),transparent 60%),linear-gradient(180deg,#0A1220,#13233A)}
+.sector:nth-child(3)::before{background:radial-gradient(120% 70% at 80% 110%,rgba(180,140,90,.30),transparent 60%),linear-gradient(180deg,#100F18,#221C22)}
+.sector:nth-child(4)::before{background:radial-gradient(120% 70% at 50% 110%,rgba(255,90,78,.26),transparent 60%),linear-gradient(180deg,#120C14,#24141C)}
+.sector .k{position:absolute;top:26px;left:28px;font:500 .72rem/1 var(--mono);letter-spacing:.16em;color:var(--dim);text-transform:uppercase}
+.sector p{color:#B9BECC;font-size:.96rem}
+@media (max-width:1000px){.sectors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.sectors{grid-template-columns:1fr}.sector{min-height:280px}}
+
+/* process: a flight plan with waypoints */
+.plan{margin-top:64px;position:relative}
+.plan svg{display:block;width:100%;height:auto}
+.plan ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.plan li{display:grid;gap:10px;align-content:start}
+.plan .wp{font:500 .76rem/1 var(--mono);letter-spacing:.16em;color:var(--amber)}
+.plan li p{color:var(--dim);font-size:.98rem}
+@media (max-width:860px){
+ .plan svg{display:none}
+ .plan ol{grid-template-columns:1fr;gap:34px;border-left:1px dashed rgba(242,166,90,.5);padding-left:26px}
+ .plan li{position:relative}
+ .plan li::before{content:"";position:absolute;left:-32px;top:-1px;width:11px;height:11px;border-radius:50%;border:2px solid var(--amber);background:var(--night)}
+}
+
+/* closing call */
+.closing{position:relative;overflow:hidden;isolation:isolate;text-align:left;
+ background:radial-gradient(70% 90% at 80% 120%,rgba(242,166,90,.38),transparent 65%),linear-gradient(180deg,var(--night),#141A30)}
+.closing .wrap{padding-block:clamp(90px,13vw,170px);display:grid;gap:26px}
+.closing h2{font-size:clamp(2.4rem,6vw,5.4rem);max-width:13ch}
+
+/* solutions groups */
+.group{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:40px 72px;padding-block:clamp(64px,8vw,110px)}
+.group+.group{padding-top:0}
+.group-head{display:grid;gap:14px;align-content:start;position:sticky;top:40px;align-self:start}
+.rows{display:grid}
+.rows article{display:grid;gap:10px;padding-block:28px}
+.rows article+article{background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 85%) top/100% 1px no-repeat}
+.rows p{color:var(--dim)}
+.rows ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.rows li{font:500 .76rem/1 var(--mono);letter-spacing:.06em;color:var(--text);padding:8px 12px;border-radius:99px;background:var(--raise)}
+@media (max-width:860px){.group{grid-template-columns:1fr}.group-head{position:static}}
+
+/* about principles */
+.principles{display:grid;margin-top:48px}
+.principles div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px 48px;padding-block:30px}
+.principles div+div{background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 85%) top/100% 1px no-repeat}
+.principles strong{font:500 clamp(1.4rem,2.4vw,2rem)/1.1 var(--display);font-stretch:115%}
+.principles p{color:var(--dim)}
+@media (max-width:760px){.principles div{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr);gap:clamp(40px,7vw,110px);align-items:start}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+form{display:grid;gap:30px;min-width:0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media (max-width:600px){.row{grid-template-columns:1fr}}
+label{display:grid;gap:8px;align-content:start}
+label>span{font:500 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+label em{font-style:normal;color:var(--faint);margin-left:8px;letter-spacing:.08em}
+input,select,textarea{font:inherit;font-size:1.1rem;color:var(--text);background:transparent;border:0;border-bottom:1px solid rgba(236,238,242,.25);border-radius:0;padding:10px 0;width:100%;transition:border-color .2s}
+select{background:var(--night)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--amber);box-shadow:0 1px 0 var(--amber)}
+textarea{min-height:130px;resize:vertical}
+::placeholder{color:var(--faint)}
+.form-status{padding:16px 18px;border-radius:14px;background:var(--raise);color:var(--text)}
+.details{display:grid;gap:30px;padding:34px;border-radius:22px;background:var(--deep)}
+.details div{display:grid;gap:6px;min-width:0}
+.details span{font:500 .72rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.details a,.details p{font-size:1.12rem;overflow-wrap:anywhere;text-decoration:none}
+.hp{position:absolute;left:-9999px}
+
+/* footer */
+.site-foot{background:var(--night);padding-block:56px 36px;color:var(--dim);font-size:.92rem}
+.site-foot .wrap{display:grid;gap:40px}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap}
+.foot-word{font:600 clamp(3rem,13vw,11rem)/.8 var(--display);font-stretch:125%;letter-spacing:.02em;color:var(--raise);user-select:none}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+.foot-links a{text-decoration:none}
+.foot-links a:hover{color:var(--text)}
+.foot-bottom{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;font-size:.85rem;color:var(--faint)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Aavynt","legalName":"Aavynt Frontier Systems Private Limited","url":"https://aavynt.com","email":"support@aavynt.com","telephone":"+919205505963","address":{"@type":"PostalAddress","streetAddress":"H. No. 130, Chharayal Nayak","addressLocality":"Haldwani","addressRegion":"Uttarakhand","postalCode":"263139","addressCountry":"IN"}}</script></head><body><header class="site-head"><div class="wrap"><a class="brand" href="./" aria-label="Aavynt home"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M16 4 L28 26 L16 20 L4 26 Z" stroke-linejoin="round"/></svg>AAVYNT</a><nav class="nav" aria-label="Main"><a href="./">Home</a><a href="solutions.html">Solutions</a><a href="about.html" aria-current="page">About</a><a class="btn" href="contact.html">Contact</a></nav></div></header>
+<main>
+<section class="sky sky-short"><div class="stars" aria-hidden="true"><i style="box-shadow:337px 428px rgba(236,238,242,.7),1412px 428px rgba(236,238,242,.7),1300px 288px rgba(236,238,242,.7),981px 221px rgba(236,238,242,.7),972px 524px rgba(236,238,242,.7),375px 517px rgba(236,238,242,.7),1080px 241px rgba(236,238,242,.7),6px 14px rgba(236,238,242,.7),759px 599px rgba(236,238,242,.7),876px 70px rgba(236,238,242,.7),296px 237px rgba(236,238,242,.7),476px 43px rgba(236,238,242,.7),894px 416px rgba(236,238,242,.7),1261px 452px rgba(236,238,242,.7),69px 336px rgba(236,238,242,.7),1106px 509px rgba(236,238,242,.7),1421px 118px rgba(236,238,242,.7),1328px 377px rgba(236,238,242,.7),47px 158px rgba(236,238,242,.7),1517px 90px rgba(236,238,242,.7),255px 20px rgba(236,238,242,.7),928px 164px rgba(236,238,242,.7),1130px 351px rgba(236,238,242,.7),821px 496px rgba(236,238,242,.7),309px 191px rgba(236,238,242,.7),1362px 38px rgba(236,238,242,.7),962px 240px rgba(236,238,242,.7),152px 202px rgba(236,238,242,.7),427px 689px rgba(236,238,242,.7),1347px 594px rgba(236,238,242,.7),1494px 72px rgba(236,238,242,.7),250px 573px rgba(236,238,242,.7),975px 572px rgba(236,238,242,.7),794px 205px rgba(236,238,242,.7),698px 149px rgba(236,238,242,.7),1097px 419px rgba(236,238,242,.7),597px 373px rgba(236,238,242,.7),924px 513px rgba(236,238,242,.7),790px 325px rgba(236,238,242,.7),992px 395px rgba(236,238,242,.7),544px 27px rgba(236,238,242,.7),191px 162px rgba(236,238,242,.7),1470px 507px rgba(236,238,242,.7),5px 503px rgba(236,238,242,.7),143px 563px rgba(236,238,242,.7),1227px 534px rgba(236,238,242,.7),454px 585px rgba(236,238,242,.7),1247px 326px rgba(236,238,242,.7),1139px 637px rgba(236,238,242,.7),230px 185px rgba(236,238,242,.7),1371px 174px rgba(236,238,242,.7),1283px 356px rgba(236,238,242,.7),680px 354px rgba(236,238,242,.7),1560px 611px rgba(236,238,242,.7),627px 251px rgba(236,238,242,.7),211px 172px rgba(236,238,242,.7),134px 178px rgba(236,238,242,.7),1591px 439px rgba(236,238,242,.7),767px 163px rgba(236,238,242,.7),1399px 37px rgba(236,238,242,.7),1384px 532px rgba(236,238,242,.7),1347px 247px rgba(236,238,242,.7),833px 167px rgba(236,238,242,.7),1519px 604px rgba(236,238,242,.7),29px 354px rgba(236,238,242,.7),1005px 518px rgba(236,238,242,.7),769px 682px rgba(236,238,242,.7),506px 251px rgba(236,238,242,.7),332px 575px rgba(236,238,242,.7),141px 449px rgba(236,238,242,.7),834px 494px rgba(236,238,242,.7),117px 294px rgba(236,238,242,.7),106px 264px rgba(236,238,242,.7),1348px 296px rgba(236,238,242,.7),71px 429px rgba(236,238,242,.7),509px 174px rgba(236,238,242,.7),807px 71px rgba(236,238,242,.7),692px 660px rgba(236,238,242,.7),299px 154px rgba(236,238,242,.7),1527px 490px rgba(236,238,242,.7),101px 258px rgba(236,238,242,.7),285px 665px rgba(236,238,242,.7),1076px 490px rgba(236,238,242,.7),57px 217px rgba(236,238,242,.7),749px 157px rgba(236,238,242,.7),755px 615px rgba(236,238,242,.7),1582px 436px rgba(236,238,242,.7),992px 595px rgba(236,238,242,.7),976px 315px rgba(236,238,242,.7),284px 547px rgba(236,238,242,.7)"></i><i style="box-shadow:287px 248px rgba(255,236,210,.85),48px 627px rgba(255,236,210,.85),915px 188px rgba(255,236,210,.85),1437px 123px rgba(255,236,210,.85),1514px 667px rgba(255,236,210,.85),707px 81px rgba(255,236,210,.85),474px 275px rgba(255,236,210,.85),101px 327px rgba(255,236,210,.85),1231px 183px rgba(255,236,210,.85),1130px 440px rgba(255,236,210,.85),1450px 49px rgba(255,236,210,.85),1181px 21px rgba(255,236,210,.85),1207px 270px rgba(255,236,210,.85),636px 431px rgba(255,236,210,.85),389px 184px rgba(255,236,210,.85),228px 596px rgba(255,236,210,.85)"></i></div><div class="wrap"><span class="kicker">About Aavynt</span><h1>Engineers who fly what they build.</h1><p class="lede">Aavynt is an Indian drone technology company. We design, integrate and support unmanned systems for organisations that need them to work the first time.</p></div><svg class="ridges" viewBox="0 0 1600 260" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 150 L120 118 L230 140 L360 96 L470 128 L600 88 L720 120 L860 80 L990 116 L1120 90 L1260 124 L1400 98 L1600 130 V260 H0Z" fill="#1A1729" opacity=".8"/>
+<path d="M0 190 L140 160 L260 182 L400 146 L540 176 L700 140 L840 172 L980 150 L1140 180 L1290 152 L1440 176 L1600 160 V260 H0Z" fill="#0F0F1C"/>
+<path d="M0 230 L180 206 L340 222 L520 198 L700 220 L900 202 L1100 224 L1300 204 L1460 220 L1600 210 V260 H0Z" fill="#06080F"/>
+</svg></section>
+<section class="s"><div class="wrap">
+ <p class="statement">Most drone failures happen at the joins. <span>Where the radio meets the flight controller, or the payload meets the power system. We design those joins ourselves and test them in the field before a system leaves our workshop.</span></p>
+</div></section>
+<section class="s" style="background:var(--deep)"><div class="wrap">
+ <span class="kicker">What we hold to</span>
+ <div class="principles">
+  <div><strong>Proven in the field</strong><p>Specifications come from flight logs, not brochures.</p></div>
+  <div><strong>Built to be serviced</strong><p>Modular parts and documentation your technicians can use.</p></div>
+  <div><strong>Made in India</strong><p>Design and integration in India, with a supply chain we can stand behind.</p></div>
+  <div><strong>Straight answers</strong><p>If a requirement is out of reach, we say so and propose what is possible.</p></div>
+ </div>
+</div></section>
+<section class="closing"><div class="wrap"><span class="kicker">Start a programme</span><h2>Tell us the mission.</h2><p class="lede">Payload, range, endurance, terrain. Send us the profile and we will come back with a proposed configuration.</p><div class="actions"><a class="btn btn-amber" href="contact.html">Talk to our engineers <span aria-hidden="true">→</span></a></div></div></section>
+</main><footer class="site-foot"><div class="wrap"><div class="foot-top"><div class="foot-links"><a href="solutions.html">Solutions</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="mailto:support@aavynt.com">support@aavynt.com</a></div><span>Unmanned systems, engineered in India.</span></div><div class="foot-word" aria-hidden="true">AAVYNT</div><div class="foot-bottom"><span>© 2026 Aavynt Frontier Systems Private Limited</span><span>Haldwani, Uttarakhand, India</span></div></div></footer></body></html>

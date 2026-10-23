@@ -1,0 +1,237 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Contact · Aavynt</title><meta name="claude:viewport-fit-sides" content="cover"><meta name="description" content="Contact Aavynt about drone systems, datalinks, payload integration, training and maintenance."><link rel="canonical" href="https://aavynt.com/contact.html"><meta property="og:title" content="Contact · Aavynt"><meta property="og:description" content="Contact Aavynt about drone systems, datalinks, payload integration, training and maintenance."><meta property="og:type" content="website"><meta property="og:image" content="https://aavynt.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080F"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M16 4 L28 26 L16 20 L4 26 Z%22 fill=%22%23F2A65A%22/%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&display=swap"><style>
+/* Layout: cinematic full-bleed bands; a dusk sky opens each page, then wide open dark space, big expanded type, no boxes */
+:root{
+--night:#06080F;--deep:#0B0F1C;--raise:#141A2E;--text:#ECEEF2;--dim:#9198AC;--faint:#4B5268;
+--amber:#F2A65A;--amber-hi:#FFC489;--on-amber:#1A0F05;--port:#FF5A4E;--starboard:#3DDC84;
+--display:"Archivo","Arial Narrow",system-ui,sans-serif;
+--body:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+--mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+--w:1240px;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--text);font:400 17px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--night)}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:4px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-stretch:125%;font-weight:600;line-height:1;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,7vw,6.2rem)}
+h2{font-size:clamp(2rem,4.4vw,3.8rem)}
+h3{font-size:clamp(1.25rem,1.8vw,1.6rem);font-weight:500;letter-spacing:-.01em;text-wrap:pretty}
+p{margin:0;max-width:60ch}
+.wrap{max-width:var(--w);margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.kicker{font:500 .74rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.lede{font-size:clamp(1.05rem,1.4vw,1.25rem);color:var(--dim)}
+.dim{color:var(--dim)}
+
+/* header floats over the sky */
+.site-head{position:absolute;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font:600 1.1rem/1 var(--display);font-stretch:125%;letter-spacing:.32em}
+.brand svg{width:22px;height:22px;color:var(--amber)}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:.95rem;padding:8px 14px;color:var(--dim);border-radius:99px}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--text)}
+.nav a[aria-current="page"]:not(.btn){background:rgba(236,238,242,.08)}
+@media (max-width:720px){
+ .site-head .wrap{padding-block:14px;min-height:0}
+ .nav{width:100%;justify-content:space-between;gap:0}
+ .nav a{padding:6px 8px;font-size:.88rem}
+}
+
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:600 .98rem/1 var(--body);padding:15px 24px;border-radius:99px;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-amber,.nav a.btn{background:var(--amber);color:var(--on-amber)}
+.nav a.btn{padding:10px 18px}
+.btn-amber:hover,.nav a.btn:hover{background:var(--amber-hi);color:var(--on-amber)}
+.btn-line{border-color:rgba(236,238,242,.28);color:var(--text)}
+.btn-line:hover{border-color:var(--text)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ---------- sky ---------- */
+.sky{position:relative;overflow:hidden;isolation:isolate;
+ background:
+  radial-gradient(90% 55% at 72% 100%,rgba(242,166,90,.42),transparent 62%),
+  radial-gradient(60% 40% at 15% 100%,rgba(120,90,160,.28),transparent 70%),
+  linear-gradient(180deg,#04060C 0%,#080D1E 38%,#141A36 68%,#2A2440 88%,#3B2C3C 100%)}
+.stars{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.stars i{position:absolute;left:0;top:0;width:1px;height:1px;border-radius:50%}
+.stars i:nth-child(2){width:2px;height:2px}
+.ridges{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:auto;z-index:-1;display:block}
+.hero{min-height:min(900px,96vh);display:flex;align-items:flex-end}
+.hero .wrap{width:100%;padding-block:160px 72px;display:grid;gap:26px}
+.hero h1{max-width:11ch}
+.hero .lede{color:#C4C8D4;max-width:52ch}
+.flyer{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.drone{position:absolute;right:max(2vw,8px);top:clamp(90px,13vh,160px);width:clamp(320px,48vw,760px);aspect-ratio:3/2;height:auto;z-index:-1;pointer-events:none}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;font:500 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding-top:10px}
+.hero-meta b{color:var(--text);font-weight:500}
+@media (max-width:720px){.drone{top:104px;right:auto;left:50%;transform:translateX(-50%);width:min(420px,108vw)}.hero:not(:has(canvas)){min-height:0}.hero .wrap{padding-block:150px 48px}.hero:has(.flyer) .wrap{padding-block:240px 48px}.hero:has(.drone) .wrap{padding-block:330px 48px}}
+
+.sky-short .wrap{padding-block:170px 80px;display:grid;gap:22px}
+.sky-short h1{font-size:clamp(2.4rem,6vw,5rem);max-width:14ch}
+@media (max-width:720px){.sky-short .wrap{padding-block:140px 56px}}
+
+/* ---------- sections ---------- */
+section.s{padding-block:clamp(80px,12vw,160px)}
+.statement{font:500 clamp(1.6rem,3.4vw,2.9rem)/1.18 var(--display);font-stretch:112%;letter-spacing:-.015em;max-width:24ch;text-wrap:balance}
+.statement span{color:var(--faint)}
+
+/* proof */
+.proof{padding-block:40px;background:var(--deep)}
+.proof ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:24px 64px}
+.proof li{display:grid;gap:4px}
+.proof strong{font:600 2rem/1 var(--display);font-stretch:125%}
+.proof span{color:var(--dim);font-size:.92rem}
+
+/* capability list: big type rows, no boxes */
+.caps{list-style:none;margin:56px 0 0;padding:0;display:grid}
+.caps li{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px 48px;padding-block:34px;align-items:baseline;position:relative}
+.caps li+li::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 80%)}
+.caps h3{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:500;transition:color .25s}
+.caps li:hover h3{color:var(--amber)}
+.caps p{color:var(--dim)}
+@media (max-width:760px){.caps li{grid-template-columns:1fr;padding-block:26px}}
+
+/* full-bleed field scene */
+.field{position:relative;min-height:min(780px,90vh);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate;background:#05070C}
+.field>img,.field>.scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.field::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,8,15,.1) 30%,rgba(6,8,15,.92))}
+.field .wrap{width:100%;padding-block:72px;display:grid;gap:18px}
+.field h2{max-width:12ch}
+
+/* sectors: four tall panels lit like different hours */
+.sectors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:56px}
+.sector{min-height:380px;border-radius:22px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;position:relative;overflow:hidden;isolation:isolate}
+.sector::before{content:"";position:absolute;inset:0;z-index:-1}
+.sector:nth-child(1)::before{background:radial-gradient(120% 70% at 50% 110%,rgba(242,166,90,.35),transparent 60%),linear-gradient(180deg,#0C1124,#1A1730)}
+.sector:nth-child(2)::before{background:radial-gradient(120% 70% at 20% 110%,rgba(110,150,220,.32),transparent 60%),linear-gradient(180deg,#0A1220,#13233A)}
+.sector:nth-child(3)::before{background:radial-gradient(120% 70% at 80% 110%,rgba(180,140,90,.30),transparent 60%),linear-gradient(180deg,#100F18,#221C22)}
+.sector:nth-child(4)::before{background:radial-gradient(120% 70% at 50% 110%,rgba(255,90,78,.26),transparent 60%),linear-gradient(180deg,#120C14,#24141C)}
+.sector .k{position:absolute;top:26px;left:28px;font:500 .72rem/1 var(--mono);letter-spacing:.16em;color:var(--dim);text-transform:uppercase}
+.sector p{color:#B9BECC;font-size:.96rem}
+@media (max-width:1000px){.sectors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.sectors{grid-template-columns:1fr}.sector{min-height:280px}}
+
+/* process: a flight plan with waypoints */
+.plan{margin-top:64px;position:relative}
+.plan svg{display:block;width:100%;height:auto}
+.plan ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.plan li{display:grid;gap:10px;align-content:start}
+.plan .wp{font:500 .76rem/1 var(--mono);letter-spacing:.16em;color:var(--amber)}
+.plan li p{color:var(--dim);font-size:.98rem}
+@media (max-width:860px){
+ .plan svg{display:none}
+ .plan ol{grid-template-columns:1fr;gap:34px;border-left:1px dashed rgba(242,166,90,.5);padding-left:26px}
+ .plan li{position:relative}
+ .plan li::before{content:"";position:absolute;left:-32px;top:-1px;width:11px;height:11px;border-radius:50%;border:2px solid var(--amber);background:var(--night)}
+}
+
+/* closing call */
+.closing{position:relative;overflow:hidden;isolation:isolate;text-align:left;
+ background:radial-gradient(70% 90% at 80% 120%,rgba(242,166,90,.38),transparent 65%),linear-gradient(180deg,var(--night),#141A30)}
+.closing .wrap{padding-block:clamp(90px,13vw,170px);display:grid;gap:26px}
+.closing h2{font-size:clamp(2.4rem,6vw,5.4rem);max-width:13ch}
+
+/* solutions groups */
+.group{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:40px 72px;padding-block:clamp(64px,8vw,110px)}
+.group+.group{padding-top:0}
+.group-head{display:grid;gap:14px;align-content:start;position:sticky;top:40px;align-self:start}
+.rows{display:grid}
+.rows article{display:grid;gap:10px;padding-block:28px}
+.rows article+article{background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 85%) top/100% 1px no-repeat}
+.rows p{color:var(--dim)}
+.rows ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.rows li{font:500 .76rem/1 var(--mono);letter-spacing:.06em;color:var(--text);padding:8px 12px;border-radius:99px;background:var(--raise)}
+@media (max-width:860px){.group{grid-template-columns:1fr}.group-head{position:static}}
+
+/* about principles */
+.principles{display:grid;margin-top:48px}
+.principles div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px 48px;padding-block:30px}
+.principles div+div{background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 85%) top/100% 1px no-repeat}
+.principles strong{font:500 clamp(1.4rem,2.4vw,2rem)/1.1 var(--display);font-stretch:115%}
+.principles p{color:var(--dim)}
+@media (max-width:760px){.principles div{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr);gap:clamp(40px,7vw,110px);align-items:start}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+form{display:grid;gap:30px;min-width:0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media (max-width:600px){.row{grid-template-columns:1fr}}
+label{display:grid;gap:8px;align-content:start}
+label>span{font:500 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+label em{font-style:normal;color:var(--faint);margin-left:8px;letter-spacing:.08em}
+input,select,textarea{font:inherit;font-size:1.1rem;color:var(--text);background:transparent;border:0;border-bottom:1px solid rgba(236,238,242,.25);border-radius:0;padding:10px 0;width:100%;transition:border-color .2s}
+select{background:var(--night)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--amber);box-shadow:0 1px 0 var(--amber)}
+textarea{min-height:130px;resize:vertical}
+::placeholder{color:var(--faint)}
+.form-status{padding:16px 18px;border-radius:14px;background:var(--raise);color:var(--text)}
+.details{display:grid;gap:30px;padding:34px;border-radius:22px;background:var(--deep)}
+.details div{display:grid;gap:6px;min-width:0}
+.details span{font:500 .72rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.details a,.details p{font-size:1.12rem;overflow-wrap:anywhere;text-decoration:none}
+.hp{position:absolute;left:-9999px}
+
+/* footer */
+.site-foot{background:var(--night);padding-block:56px 36px;color:var(--dim);font-size:.92rem}
+.site-foot .wrap{display:grid;gap:40px}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap}
+.foot-word{font:600 clamp(3rem,13vw,11rem)/.8 var(--display);font-stretch:125%;letter-spacing:.02em;color:var(--raise);user-select:none}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+.foot-links a{text-decoration:none}
+.foot-links a:hover{color:var(--text)}
+.foot-bottom{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;font-size:.85rem;color:var(--faint)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Aavynt","legalName":"Aavynt Frontier Systems Private Limited","url":"https://aavynt.com","email":"support@aavynt.com","telephone":"+919205505963","address":{"@type":"PostalAddress","streetAddress":"H. No. 130, Chharayal Nayak","addressLocality":"Haldwani","addressRegion":"Uttarakhand","postalCode":"263139","addressCountry":"IN"}}</script></head><body><header class="site-head"><div class="wrap"><a class="brand" href="./" aria-label="Aavynt home"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M16 4 L28 26 L16 20 L4 26 Z" stroke-linejoin="round"/></svg>AAVYNT</a><nav class="nav" aria-label="Main"><a href="./">Home</a><a href="solutions.html">Solutions</a><a href="about.html">About</a><a class="btn" href="contact.html" aria-current="page">Contact</a></nav></div></header>
+<main>
+<section class="sky sky-short"><div class="stars" aria-hidden="true"><i style="box-shadow:25px 480px rgba(236,238,242,.7),230px 402px rgba(236,238,242,.7),288px 700px rgba(236,238,242,.7),88px 142px rgba(236,238,242,.7),230px 548px rgba(236,238,242,.7),474px 142px rgba(236,238,242,.7),301px 33px rgba(236,238,242,.7),1356px 62px rgba(236,238,242,.7),279px 236px rgba(236,238,242,.7),1097px 458px rgba(236,238,242,.7),1077px 422px rgba(236,238,242,.7),419px 607px rgba(236,238,242,.7),190px 120px rgba(236,238,242,.7),41px 412px rgba(236,238,242,.7),699px 203px rgba(236,238,242,.7),421px 338px rgba(236,238,242,.7),802px 373px rgba(236,238,242,.7),1222px 252px rgba(236,238,242,.7),430px 222px rgba(236,238,242,.7),852px 598px rgba(236,238,242,.7),1357px 560px rgba(236,238,242,.7),122px 52px rgba(236,238,242,.7),368px 364px rgba(236,238,242,.7),275px 208px rgba(236,238,242,.7),302px 385px rgba(236,238,242,.7),62px 88px rgba(236,238,242,.7),1505px 543px rgba(236,238,242,.7),898px 666px rgba(236,238,242,.7),447px 212px rgba(236,238,242,.7),885px 376px rgba(236,238,242,.7),396px 338px rgba(236,238,242,.7),1312px 224px rgba(236,238,242,.7),987px 42px rgba(236,238,242,.7),539px 344px rgba(236,238,242,.7),600px 342px rgba(236,238,242,.7),1171px 405px rgba(236,238,242,.7),986px 662px rgba(236,238,242,.7),1332px 323px rgba(236,238,242,.7),436px 97px rgba(236,238,242,.7),1582px 313px rgba(236,238,242,.7),361px 573px rgba(236,238,242,.7),1277px 558px rgba(236,238,242,.7),1381px 302px rgba(236,238,242,.7),191px 177px rgba(236,238,242,.7),394px 29px rgba(236,238,242,.7),1231px 383px rgba(236,238,242,.7),1424px 97px rgba(236,238,242,.7),1371px 408px rgba(236,238,242,.7),583px 312px rgba(236,238,242,.7),1329px 201px rgba(236,238,242,.7),233px 465px rgba(236,238,242,.7),414px 341px rgba(236,238,242,.7),910px 412px rgba(236,238,242,.7),99px 575px rgba(236,238,242,.7),1462px 120px rgba(236,238,242,.7),548px 101px rgba(236,238,242,.7),1304px 122px rgba(236,238,242,.7),397px 205px rgba(236,238,242,.7),686px 166px rgba(236,238,242,.7),1461px 155px rgba(236,238,242,.7),974px 59px rgba(236,238,242,.7),1020px 626px rgba(236,238,242,.7),1048px 284px rgba(236,238,242,.7),762px 627px rgba(236,238,242,.7),1004px 651px rgba(236,238,242,.7),1209px 38px rgba(236,238,242,.7),229px 497px rgba(236,238,242,.7),282px 620px rgba(236,238,242,.7),1419px 509px rgba(236,238,242,.7),1571px 25px rgba(236,238,242,.7),521px 501px rgba(236,238,242,.7),1567px 481px rgba(236,238,242,.7),714px 243px rgba(236,238,242,.7),22px 99px rgba(236,238,242,.7),768px 596px rgba(236,238,242,.7),578px 456px rgba(236,238,242,.7),360px 46px rgba(236,238,242,.7),270px 127px rgba(236,238,242,.7),1161px 628px rgba(236,238,242,.7),102px 628px rgba(236,238,242,.7),422px 197px rgba(236,238,242,.7),611px 188px rgba(236,238,242,.7),1135px 465px rgba(236,238,242,.7),1143px 525px rgba(236,238,242,.7),1073px 515px rgba(236,238,242,.7),822px 232px rgba(236,238,242,.7),1073px 199px rgba(236,238,242,.7),1468px 629px rgba(236,238,242,.7),945px 315px rgba(236,238,242,.7),1468px 478px rgba(236,238,242,.7)"></i><i style="box-shadow:158px 218px rgba(255,236,210,.85),296px 310px rgba(255,236,210,.85),1430px 243px rgba(255,236,210,.85),1016px 24px rgba(255,236,210,.85),1475px 39px rgba(255,236,210,.85),205px 332px rgba(255,236,210,.85),1042px 338px rgba(255,236,210,.85),116px 535px rgba(255,236,210,.85),1414px 480px rgba(255,236,210,.85),759px 615px rgba(255,236,210,.85),1px 555px rgba(255,236,210,.85),1546px 129px rgba(255,236,210,.85),1074px 9px rgba(255,236,210,.85),994px 207px rgba(255,236,210,.85),589px 206px rgba(255,236,210,.85),913px 83px rgba(255,236,210,.85)"></i></div><div class="wrap"><span class="kicker">Contact</span><h1>Tell us about your mission.</h1><p class="lede">Share what you need to fly, where and for how long. Your enquiry goes straight to our engineering team.</p></div><svg class="ridges" viewBox="0 0 1600 260" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 150 L120 118 L230 140 L360 96 L470 128 L600 88 L720 120 L860 80 L990 116 L1120 90 L1260 124 L1400 98 L1600 130 V260 H0Z" fill="#1A1729" opacity=".8"/>
+<path d="M0 190 L140 160 L260 182 L400 146 L540 176 L700 140 L840 172 L980 150 L1140 180 L1290 152 L1440 176 L1600 160 V260 H0Z" fill="#0F0F1C"/>
+<path d="M0 230 L180 206 L340 222 L520 198 L700 220 L900 202 L1100 224 L1300 204 L1460 220 L1600 210 V260 H0Z" fill="#06080F"/>
+</svg></section>
+<section class="s" style="padding-top:clamp(56px,8vw,96px)"><div class="wrap contact">
+ <form id="contact-form" novalidate>
+  <div class="row">
+   <label for="f-name"><span>Name</span><input id="f-name" name="name" autocomplete="name" required></label>
+   <label for="f-org"><span>Organisation<em>optional</em></span><input id="f-org" name="organisation" autocomplete="organization"></label>
+  </div>
+  <div class="row">
+   <label for="f-email"><span>Email</span><input id="f-email" name="email" type="email" autocomplete="email" required></label>
+   <label for="f-phone"><span>Phone<em>optional</em></span><input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
+  </div>
+  <label for="f-topic"><span>What do you need?</span>
+   <select id="f-topic" name="topic">
+    <option>A complete drone system</option><option>Datalinks or ground control</option>
+    <option>Payload integration</option><option>Training or maintenance</option><option>Something else</option>
+   </select></label>
+  <label for="f-msg"><span>Mission details</span><textarea id="f-msg" name="message" required placeholder="Payload, range, endurance, operating environment, quantity, timeline"></textarea></label>
+  <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <div class="actions"><button class="btn btn-amber" type="submit" id="f-submit">Send enquiry</button></div>
+  <p class="form-status" id="f-status" role="status" hidden></p>
+ </form>
+ <aside class="details" aria-label="Contact details">
+  <div><span>Email</span><a href="mailto:support@aavynt.com">support@aavynt.com</a></div>
+  <div><span>Phone</span><a href="tel:+919205505963">+91 92055 05963</a></div>
+  <div><span>Registered office</span><p>Aavynt Frontier Systems Private Limited<br>C/o Umed Singh, H. No. 130<br>Chharayal Nayak, Haldwani<br>District Nainital, Uttarakhand 263139</p></div>
+ </aside>
+</div></section>
+</main>
+<script>
+(function(){
+ var ENDPOINT = '';
+ var f=document.getElementById('contact-form'),s=document.getElementById('f-status'),b=document.getElementById('f-submit');
+ function say(t){s.textContent=t;s.hidden=false}
+ f.addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!f.checkValidity()){say('Please add your name, a valid email and a few mission details.');f.reportValidity();return}
+  if(!ENDPOINT){say('The form is not connected yet. Please email support@aavynt.com.');return}
+  b.disabled=true;b.textContent='Sending…';
+  fetch(ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+   .then(function(r){if(!r.ok)throw 0;f.reset();say('Enquiry sent. Our engineering team will get back to you by email.')})
+   .catch(function(){say('That did not send. Check your connection and try again, or email support@aavynt.com.')})
+   .finally(function(){b.disabled=false;b.textContent='Send enquiry'});
+ });
+})();
+</script><footer class="site-foot"><div class="wrap"><div class="foot-top"><div class="foot-links"><a href="solutions.html">Solutions</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="mailto:support@aavynt.com">support@aavynt.com</a></div><span>Unmanned systems, engineered in India.</span></div><div class="foot-word" aria-hidden="true">AAVYNT</div><div class="foot-bottom"><span>© 2026 Aavynt Frontier Systems Private Limited</span><span>Haldwani, Uttarakhand, India</span></div></div></footer></body></html>

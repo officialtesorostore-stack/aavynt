@@ -1,0 +1,199 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Page not found · Aavynt</title><meta name="claude:viewport-fit-sides" content="cover"><meta name="description" content="Page not found."><link rel="canonical" href="https://aavynt.com/404.html"><meta property="og:title" content="Page not found · Aavynt"><meta property="og:description" content="Page not found."><meta property="og:type" content="website"><meta property="og:image" content="https://aavynt.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080F"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M16 4 L28 26 L16 20 L4 26 Z%22 fill=%22%23F2A65A%22/%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&display=swap"><style>
+/* Layout: cinematic full-bleed bands; a dusk sky opens each page, then wide open dark space, big expanded type, no boxes */
+:root{
+--night:#06080F;--deep:#0B0F1C;--raise:#141A2E;--text:#ECEEF2;--dim:#9198AC;--faint:#4B5268;
+--amber:#F2A65A;--amber-hi:#FFC489;--on-amber:#1A0F05;--port:#FF5A4E;--starboard:#3DDC84;
+--display:"Archivo","Arial Narrow",system-ui,sans-serif;
+--body:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+--mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+--w:1240px;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--text);font:400 17px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--night)}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:4px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-stretch:125%;font-weight:600;line-height:1;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,7vw,6.2rem)}
+h2{font-size:clamp(2rem,4.4vw,3.8rem)}
+h3{font-size:clamp(1.25rem,1.8vw,1.6rem);font-weight:500;letter-spacing:-.01em;text-wrap:pretty}
+p{margin:0;max-width:60ch}
+.wrap{max-width:var(--w);margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.kicker{font:500 .74rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.lede{font-size:clamp(1.05rem,1.4vw,1.25rem);color:var(--dim)}
+.dim{color:var(--dim)}
+
+/* header floats over the sky */
+.site-head{position:absolute;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font:600 1.1rem/1 var(--display);font-stretch:125%;letter-spacing:.32em}
+.brand svg{width:22px;height:22px;color:var(--amber)}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:.95rem;padding:8px 14px;color:var(--dim);border-radius:99px}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--text)}
+.nav a[aria-current="page"]:not(.btn){background:rgba(236,238,242,.08)}
+@media (max-width:720px){
+ .site-head .wrap{padding-block:14px;min-height:0}
+ .nav{width:100%;justify-content:space-between;gap:0}
+ .nav a{padding:6px 8px;font-size:.88rem}
+}
+
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:600 .98rem/1 var(--body);padding:15px 24px;border-radius:99px;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-amber,.nav a.btn{background:var(--amber);color:var(--on-amber)}
+.nav a.btn{padding:10px 18px}
+.btn-amber:hover,.nav a.btn:hover{background:var(--amber-hi);color:var(--on-amber)}
+.btn-line{border-color:rgba(236,238,242,.28);color:var(--text)}
+.btn-line:hover{border-color:var(--text)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ---------- sky ---------- */
+.sky{position:relative;overflow:hidden;isolation:isolate;
+ background:
+  radial-gradient(90% 55% at 72% 100%,rgba(242,166,90,.42),transparent 62%),
+  radial-gradient(60% 40% at 15% 100%,rgba(120,90,160,.28),transparent 70%),
+  linear-gradient(180deg,#04060C 0%,#080D1E 38%,#141A36 68%,#2A2440 88%,#3B2C3C 100%)}
+.stars{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.stars i{position:absolute;left:0;top:0;width:1px;height:1px;border-radius:50%}
+.stars i:nth-child(2){width:2px;height:2px}
+.ridges{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:auto;z-index:-1;display:block}
+.hero{min-height:min(900px,96vh);display:flex;align-items:flex-end}
+.hero .wrap{width:100%;padding-block:160px 72px;display:grid;gap:26px}
+.hero h1{max-width:11ch}
+.hero .lede{color:#C4C8D4;max-width:52ch}
+.flyer{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.drone{position:absolute;right:max(2vw,8px);top:clamp(90px,13vh,160px);width:clamp(320px,48vw,760px);aspect-ratio:3/2;height:auto;z-index:-1;pointer-events:none}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;font:500 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding-top:10px}
+.hero-meta b{color:var(--text);font-weight:500}
+@media (max-width:720px){.drone{top:104px;right:auto;left:50%;transform:translateX(-50%);width:min(420px,108vw)}.hero:not(:has(canvas)){min-height:0}.hero .wrap{padding-block:150px 48px}.hero:has(.flyer) .wrap{padding-block:240px 48px}.hero:has(.drone) .wrap{padding-block:330px 48px}}
+
+.sky-short .wrap{padding-block:170px 80px;display:grid;gap:22px}
+.sky-short h1{font-size:clamp(2.4rem,6vw,5rem);max-width:14ch}
+@media (max-width:720px){.sky-short .wrap{padding-block:140px 56px}}
+
+/* ---------- sections ---------- */
+section.s{padding-block:clamp(80px,12vw,160px)}
+.statement{font:500 clamp(1.6rem,3.4vw,2.9rem)/1.18 var(--display);font-stretch:112%;letter-spacing:-.015em;max-width:24ch;text-wrap:balance}
+.statement span{color:var(--faint)}
+
+/* proof */
+.proof{padding-block:40px;background:var(--deep)}
+.proof ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:24px 64px}
+.proof li{display:grid;gap:4px}
+.proof strong{font:600 2rem/1 var(--display);font-stretch:125%}
+.proof span{color:var(--dim);font-size:.92rem}
+
+/* capability list: big type rows, no boxes */
+.caps{list-style:none;margin:56px 0 0;padding:0;display:grid}
+.caps li{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px 48px;padding-block:34px;align-items:baseline;position:relative}
+.caps li+li::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 80%)}
+.caps h3{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:500;transition:color .25s}
+.caps li:hover h3{color:var(--amber)}
+.caps p{color:var(--dim)}
+@media (max-width:760px){.caps li{grid-template-columns:1fr;padding-block:26px}}
+
+/* full-bleed field scene */
+.field{position:relative;min-height:min(780px,90vh);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate;background:#05070C}
+.field>img,.field>.scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.field::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,8,15,.1) 30%,rgba(6,8,15,.92))}
+.field .wrap{width:100%;padding-block:72px;display:grid;gap:18px}
+.field h2{max-width:12ch}
+
+/* sectors: four tall panels lit like different hours */
+.sectors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:56px}
+.sector{min-height:380px;border-radius:22px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;position:relative;overflow:hidden;isolation:isolate}
+.sector::before{content:"";position:absolute;inset:0;z-index:-1}
+.sector:nth-child(1)::before{background:radial-gradient(120% 70% at 50% 110%,rgba(242,166,90,.35),transparent 60%),linear-gradient(180deg,#0C1124,#1A1730)}
+.sector:nth-child(2)::before{background:radial-gradient(120% 70% at 20% 110%,rgba(110,150,220,.32),transparent 60%),linear-gradient(180deg,#0A1220,#13233A)}
+.sector:nth-child(3)::before{background:radial-gradient(120% 70% at 80% 110%,rgba(180,140,90,.30),transparent 60%),linear-gradient(180deg,#100F18,#221C22)}
+.sector:nth-child(4)::before{background:radial-gradient(120% 70% at 50% 110%,rgba(255,90,78,.26),transparent 60%),linear-gradient(180deg,#120C14,#24141C)}
+.sector .k{position:absolute;top:26px;left:28px;font:500 .72rem/1 var(--mono);letter-spacing:.16em;color:var(--dim);text-transform:uppercase}
+.sector p{color:#B9BECC;font-size:.96rem}
+@media (max-width:1000px){.sectors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.sectors{grid-template-columns:1fr}.sector{min-height:280px}}
+
+/* process: a flight plan with waypoints */
+.plan{margin-top:64px;position:relative}
+.plan svg{display:block;width:100%;height:auto}
+.plan ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.plan li{display:grid;gap:10px;align-content:start}
+.plan .wp{font:500 .76rem/1 var(--mono);letter-spacing:.16em;color:var(--amber)}
+.plan li p{color:var(--dim);font-size:.98rem}
+@media (max-width:860px){
+ .plan svg{display:none}
+ .plan ol{grid-template-columns:1fr;gap:34px;border-left:1px dashed rgba(242,166,90,.5);padding-left:26px}
+ .plan li{position:relative}
+ .plan li::before{content:"";position:absolute;left:-32px;top:-1px;width:11px;height:11px;border-radius:50%;border:2px solid var(--amber);background:var(--night)}
+}
+
+/* closing call */
+.closing{position:relative;overflow:hidden;isolation:isolate;text-align:left;
+ background:radial-gradient(70% 90% at 80% 120%,rgba(242,166,90,.38),transparent 65%),linear-gradient(180deg,var(--night),#141A30)}
+.closing .wrap{padding-block:clamp(90px,13vw,170px);display:grid;gap:26px}
+.closing h2{font-size:clamp(2.4rem,6vw,5.4rem);max-width:13ch}
+
+/* solutions groups */
+.group{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:40px 72px;padding-block:clamp(64px,8vw,110px)}
+.group+.group{padding-top:0}
+.group-head{display:grid;gap:14px;align-content:start;position:sticky;top:40px;align-self:start}
+.rows{display:grid}
+.rows article{display:grid;gap:10px;padding-block:28px}
+.rows article+article{background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 85%) top/100% 1px no-repeat}
+.rows p{color:var(--dim)}
+.rows ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.rows li{font:500 .76rem/1 var(--mono);letter-spacing:.06em;color:var(--text);padding:8px 12px;border-radius:99px;background:var(--raise)}
+@media (max-width:860px){.group{grid-template-columns:1fr}.group-head{position:static}}
+
+/* about principles */
+.principles{display:grid;margin-top:48px}
+.principles div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px 48px;padding-block:30px}
+.principles div+div{background:linear-gradient(90deg,rgba(236,238,242,.14),transparent 85%) top/100% 1px no-repeat}
+.principles strong{font:500 clamp(1.4rem,2.4vw,2rem)/1.1 var(--display);font-stretch:115%}
+.principles p{color:var(--dim)}
+@media (max-width:760px){.principles div{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr);gap:clamp(40px,7vw,110px);align-items:start}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+form{display:grid;gap:30px;min-width:0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media (max-width:600px){.row{grid-template-columns:1fr}}
+label{display:grid;gap:8px;align-content:start}
+label>span{font:500 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+label em{font-style:normal;color:var(--faint);margin-left:8px;letter-spacing:.08em}
+input,select,textarea{font:inherit;font-size:1.1rem;color:var(--text);background:transparent;border:0;border-bottom:1px solid rgba(236,238,242,.25);border-radius:0;padding:10px 0;width:100%;transition:border-color .2s}
+select{background:var(--night)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--amber);box-shadow:0 1px 0 var(--amber)}
+textarea{min-height:130px;resize:vertical}
+::placeholder{color:var(--faint)}
+.form-status{padding:16px 18px;border-radius:14px;background:var(--raise);color:var(--text)}
+.details{display:grid;gap:30px;padding:34px;border-radius:22px;background:var(--deep)}
+.details div{display:grid;gap:6px;min-width:0}
+.details span{font:500 .72rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.details a,.details p{font-size:1.12rem;overflow-wrap:anywhere;text-decoration:none}
+.hp{position:absolute;left:-9999px}
+
+/* footer */
+.site-foot{background:var(--night);padding-block:56px 36px;color:var(--dim);font-size:.92rem}
+.site-foot .wrap{display:grid;gap:40px}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap}
+.foot-word{font:600 clamp(3rem,13vw,11rem)/.8 var(--display);font-stretch:125%;letter-spacing:.02em;color:var(--raise);user-select:none}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+.foot-links a{text-decoration:none}
+.foot-links a:hover{color:var(--text)}
+.foot-bottom{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;font-size:.85rem;color:var(--faint)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Aavynt","legalName":"Aavynt Frontier Systems Private Limited","url":"https://aavynt.com","email":"support@aavynt.com","telephone":"+919205505963","address":{"@type":"PostalAddress","streetAddress":"H. No. 130, Chharayal Nayak","addressLocality":"Haldwani","addressRegion":"Uttarakhand","postalCode":"263139","addressCountry":"IN"}}</script></head><body><header class="site-head"><div class="wrap"><a class="brand" href="./" aria-label="Aavynt home"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M16 4 L28 26 L16 20 L4 26 Z" stroke-linejoin="round"/></svg>AAVYNT</a><nav class="nav" aria-label="Main"><a href="./">Home</a><a href="solutions.html">Solutions</a><a href="about.html">About</a><a class="btn" href="contact.html">Contact</a></nav></div></header>
+<main><section class="sky hero" style="min-height:100vh"><div class="stars" aria-hidden="true"><i style="box-shadow:780px 340px rgba(236,238,242,.7),472px 170px rgba(236,238,242,.7),789px 591px rgba(236,238,242,.7),1413px 290px rgba(236,238,242,.7),1132px 283px rgba(236,238,242,.7),785px 590px rgba(236,238,242,.7),19px 255px rgba(236,238,242,.7),1354px 18px rgba(236,238,242,.7),899px 158px rgba(236,238,242,.7),306px 326px rgba(236,238,242,.7),343px 263px rgba(236,238,242,.7),1340px 635px rgba(236,238,242,.7),1195px 60px rgba(236,238,242,.7),245px 601px rgba(236,238,242,.7),67px 442px rgba(236,238,242,.7),577px 221px rgba(236,238,242,.7),148px 368px rgba(236,238,242,.7),1499px 486px rgba(236,238,242,.7),256px 568px rgba(236,238,242,.7),1372px 18px rgba(236,238,242,.7),253px 101px rgba(236,238,242,.7),294px 182px rgba(236,238,242,.7),109px 272px rgba(236,238,242,.7),650px 230px rgba(236,238,242,.7),1269px 26px rgba(236,238,242,.7),1245px 591px rgba(236,238,242,.7),372px 445px rgba(236,238,242,.7),117px 308px rgba(236,238,242,.7),818px 149px rgba(236,238,242,.7),218px 683px rgba(236,238,242,.7),191px 416px rgba(236,238,242,.7),44px 679px rgba(236,238,242,.7),1344px 505px rgba(236,238,242,.7),808px 235px rgba(236,238,242,.7),44px 87px rgba(236,238,242,.7),276px 79px rgba(236,238,242,.7),938px 411px rgba(236,238,242,.7),871px 545px rgba(236,238,242,.7),1524px 286px rgba(236,238,242,.7),1105px 28px rgba(236,238,242,.7),29px 670px rgba(236,238,242,.7),949px 329px rgba(236,238,242,.7),361px 142px rgba(236,238,242,.7),134px 40px rgba(236,238,242,.7),1475px 698px rgba(236,238,242,.7),1538px 111px rgba(236,238,242,.7),1352px 130px rgba(236,238,242,.7),846px 671px rgba(236,238,242,.7),1453px 87px rgba(236,238,242,.7),1247px 541px rgba(236,238,242,.7),856px 615px rgba(236,238,242,.7),203px 247px rgba(236,238,242,.7),451px 447px rgba(236,238,242,.7),743px 470px rgba(236,238,242,.7),1392px 420px rgba(236,238,242,.7),921px 84px rgba(236,238,242,.7),1369px 282px rgba(236,238,242,.7),1110px 216px rgba(236,238,242,.7),1405px 254px rgba(236,238,242,.7),567px 386px rgba(236,238,242,.7),1441px 333px rgba(236,238,242,.7),1275px 388px rgba(236,238,242,.7),603px 451px rgba(236,238,242,.7),1499px 82px rgba(236,238,242,.7),438px 565px rgba(236,238,242,.7),336px 218px rgba(236,238,242,.7),63px 230px rgba(236,238,242,.7),369px 480px rgba(236,238,242,.7),1365px 246px rgba(236,238,242,.7),131px 242px rgba(236,238,242,.7),1121px 580px rgba(236,238,242,.7),1275px 158px rgba(236,238,242,.7),1009px 336px rgba(236,238,242,.7),249px 233px rgba(236,238,242,.7),786px 692px rgba(236,238,242,.7),1477px 121px rgba(236,238,242,.7),915px 613px rgba(236,238,242,.7),1515px 197px rgba(236,238,242,.7),1131px 509px rgba(236,238,242,.7),804px 365px rgba(236,238,242,.7),554px 362px rgba(236,238,242,.7),61px 182px rgba(236,238,242,.7),1207px 157px rgba(236,238,242,.7),1307px 156px rgba(236,238,242,.7),1050px 530px rgba(236,238,242,.7),1330px 181px rgba(236,238,242,.7),842px 73px rgba(236,238,242,.7),85px 522px rgba(236,238,242,.7),1364px 609px rgba(236,238,242,.7),1420px 360px rgba(236,238,242,.7),438px 698px rgba(236,238,242,.7),817px 315px rgba(236,238,242,.7),581px 155px rgba(236,238,242,.7),530px 388px rgba(236,238,242,.7),1253px 236px rgba(236,238,242,.7),251px 286px rgba(236,238,242,.7),1273px 601px rgba(236,238,242,.7),853px 310px rgba(236,238,242,.7),825px 503px rgba(236,238,242,.7),1416px 244px rgba(236,238,242,.7),199px 512px rgba(236,238,242,.7),962px 608px rgba(236,238,242,.7),903px 238px rgba(236,238,242,.7),990px 186px rgba(236,238,242,.7),971px 298px rgba(236,238,242,.7),147px 252px rgba(236,238,242,.7),1014px 482px rgba(236,238,242,.7),1165px 384px rgba(236,238,242,.7),111px 625px rgba(236,238,242,.7),1467px 547px rgba(236,238,242,.7),54px 645px rgba(236,238,242,.7),400px 422px rgba(236,238,242,.7),1021px 330px rgba(236,238,242,.7),750px 593px rgba(236,238,242,.7),352px 437px rgba(236,238,242,.7),33px 227px rgba(236,238,242,.7),339px 630px rgba(236,238,242,.7),1052px 410px rgba(236,238,242,.7),304px 27px rgba(236,238,242,.7),1341px 604px rgba(236,238,242,.7),1087px 384px rgba(236,238,242,.7),55px 239px rgba(236,238,242,.7),554px 636px rgba(236,238,242,.7),48px 570px rgba(236,238,242,.7),1569px 538px rgba(236,238,242,.7),1489px 252px rgba(236,238,242,.7),790px 190px rgba(236,238,242,.7),90px 539px rgba(236,238,242,.7),670px 600px rgba(236,238,242,.7),1045px 188px rgba(236,238,242,.7),1002px 65px rgba(236,238,242,.7),1162px 550px rgba(236,238,242,.7),1476px 41px rgba(236,238,242,.7),388px 378px rgba(236,238,242,.7),369px 283px rgba(236,238,242,.7),992px 89px rgba(236,238,242,.7),1544px 674px rgba(236,238,242,.7),898px 17px rgba(236,238,242,.7),1461px 317px rgba(236,238,242,.7),217px 311px rgba(236,238,242,.7)"></i><i style="box-shadow:1309px 114px rgba(255,236,210,.85),51px 281px rgba(255,236,210,.85),501px 228px rgba(255,236,210,.85),285px 104px rgba(255,236,210,.85),1385px 558px rgba(255,236,210,.85),178px 604px rgba(255,236,210,.85),864px 32px rgba(255,236,210,.85),61px 95px rgba(255,236,210,.85),447px 238px rgba(255,236,210,.85),1034px 616px rgba(255,236,210,.85),54px 574px rgba(255,236,210,.85),407px 665px rgba(255,236,210,.85),1436px 558px rgba(255,236,210,.85),859px 225px rgba(255,236,210,.85),919px 603px rgba(255,236,210,.85),569px 6px rgba(255,236,210,.85),1554px 163px rgba(255,236,210,.85),1429px 432px rgba(255,236,210,.85),696px 284px rgba(255,236,210,.85),318px 220px rgba(255,236,210,.85),1563px 344px rgba(255,236,210,.85),209px 94px rgba(255,236,210,.85),778px 99px rgba(255,236,210,.85),735px 352px rgba(255,236,210,.85),1236px 270px rgba(255,236,210,.85),88px 470px rgba(255,236,210,.85)"></i></div>
+ <div class="wrap">
+  <span class="kicker">Error 404 · Off course</span>
+  <h1>This page isn't on the flight plan.</h1>
+  <p class="lede">The link may be old or mistyped.</p>
+  <div class="actions"><a class="btn btn-amber" href="/">Return to home</a><a class="btn btn-line" href="/contact.html">Contact us</a></div>
+ </div><svg class="ridges" viewBox="0 0 1600 260" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 150 L120 118 L230 140 L360 96 L470 128 L600 88 L720 120 L860 80 L990 116 L1120 90 L1260 124 L1400 98 L1600 130 V260 H0Z" fill="#1A1729" opacity=".8"/>
+<path d="M0 190 L140 160 L260 182 L400 146 L540 176 L700 140 L840 172 L980 150 L1140 180 L1290 152 L1440 176 L1600 160 V260 H0Z" fill="#0F0F1C"/>
+<path d="M0 230 L180 206 L340 222 L520 198 L700 220 L900 202 L1100 224 L1300 204 L1460 220 L1600 210 V260 H0Z" fill="#06080F"/>
+</svg>
+</section></main><footer class="site-foot"><div class="wrap"><div class="foot-top"><div class="foot-links"><a href="solutions.html">Solutions</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="mailto:support@aavynt.com">support@aavynt.com</a></div><span>Unmanned systems, engineered in India.</span></div><div class="foot-word" aria-hidden="true">AAVYNT</div><div class="foot-bottom"><span>© 2026 Aavynt Frontier Systems Private Limited</span><span>Haldwani, Uttarakhand, India</span></div></div></footer></body></html>
